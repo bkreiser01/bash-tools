@@ -25,3 +25,6 @@ man() {
     LESS_TERMCAP_us="$(printf "\e[1;32m")" \
     man "${@}"
 }
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/private/git.key
